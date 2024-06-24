@@ -1,7 +1,7 @@
-const nomeRepositorio = 'teste_narwal_4' //Nome do repositório a ser criado 
+const nomeRepositorio = 'Prjeto_API' //Nome do repositório a ser criado 
 const descRepositorio = 'Repositório criado via API do GitHub para teste BackEnd utilizando o Cypress' //Descrição do repositório
 const nomeIssue = 'Nova Issue' //Nome da issue a ser criada
-const descIssue = 'Descrição da nova issue' //Descrição da issue
+const descIssue = 'Issue criada via API do GitHub' //Descrição da issue
 
 export default class Integracao {
 
