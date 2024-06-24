@@ -1,0 +1,27 @@
+{
+  "name": "marialuiza",
+  "version": "1.0.0",
+  "description": "Teste QA Narwal",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Maria Luiza Brito",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.17.4",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-localstorage-commands": "^2.2.6"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/step_definitions"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": "18.17.1"
+  }
+}
