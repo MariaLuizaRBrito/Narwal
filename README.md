@@ -1,6 +1,9 @@
 # Testes Automatizados
 
-Este projeto contém testes automatizados de Back End utilizando o framework Cypress, e focando na interação com a API do GitHub.
+Este projeto contém testes automatizados de Front End e Back End utilizando o framework Cypress.
+
+Os testes do Front End contemplam cenários automatizados na página da Narwal Sistema, focando no comportamento do site. 
+Já os testes Back End contemplam cenários de criação, exclusão e verificação de repositórios e issues através da integração com a API do GitHub. 
 
 ## Pré-requisitos
 
@@ -24,7 +27,7 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
    npm install
    ```
 
-3. **Configurações necessárias:**
+3. **Configurações necessárias para funcionamento da API:**
 
    - Para que a parte da API do GitHub funcione corretamente,no arquivo `cypress.env.json` configure suas variáveis de ambiente informando: 
 
@@ -43,21 +46,30 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
    - Clique em seu perfil no canto superior direito
    - Clique em 'Settings' ou 'Configurações'
    - Será aberta a página de configurações
-   - No menu esquerdo selecione 'Developer settings' 
+   - No menu esquerdo selecione 'Developer Settings' 
    - Clique na opção 'Personal acesss Token'
    - E clique em 'Tokens (classic)'
    - Clique em 'Generate new Token'
-   - Clique em 'Generate new Token (classic)'
+   - Selecione a opção 'Generate new Token (classic)'
    - Marque todas as opções disponiveis
+   - Clique no botão 'Generate token'
    - Seu token será gerado com sucesso 
-   - Após a geração copie o Token e informe-o no documento `cypress.env json`
+   - Após a geração copie o Token e informe-o no documento `cypress.env.json`
+
+5. **Informações importantes** 
+
+   - No arquivo  `integracao.js` informar nas variaveis: 
+      - nomeRepositorio - o nome do novo repositório a ser criado
+      - descRepositorio - a descrição do repositório
+      - nomeIssue - o nome da Issue a ser criada
+      - descIssue - a descrição da Issue
 
 ## Executando os Testes
 
 Para executar os testes, utilize o seguinte comando:
 
 ```bash
-npx cypress run
+npx cypress open
 ```
 
 Este comando inicia o Cypress, e executa os testes. 
